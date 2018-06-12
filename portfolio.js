@@ -58,18 +58,13 @@ const financeAdvisor = Object.create(null, {
     sell: {
         value: function (ticker, quantity, price) {
             let portfolioArray = financeAdvisor.portfolio;
-            let newValue = {};
-
             portfolioArray.forEach(function (element) {
-                console.log(element)
                 if (ticker === element.name) {
                     element.shares -= quantity;
                     element.valuation -= price;
-                } else {
-                    console.log("Please input owned stock")
+                    console.log(`Your new values for ${ticker} stock are Quantity: ${element.shares} Valuation: ${element.valuation}`);
                 }
             });
-            return portfolioArray;
         }
     }
 });
