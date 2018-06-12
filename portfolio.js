@@ -6,7 +6,7 @@ const financeAdvisor = Object.create(null, {
         writable: true,
     },
     specialty: {
-        value: "Making lots of money",
+        value: "Making lots of money.",
         enumerable: true,
         writable: true,
     },
@@ -63,6 +63,7 @@ const financeAdvisor = Object.create(null, {
                     element.shares -= quantity;
                     element.valuation -= price;
                     console.log(`Your new values for ${ticker} stock are Quantity: ${element.shares} Valuation: ${element.valuation}`);
+                    pageBuilder();
                 }
             });
         }
